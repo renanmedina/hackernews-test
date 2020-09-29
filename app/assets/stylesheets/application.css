@@ -1,0 +1,114 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html, body {
+    position: relative;
+    padding: 0;
+    margin:0;
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+a, a:active, a:hover, a:visited {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.hackernews-header {
+    position:fixed;
+    z-index:999;
+    width: 100%;
+    height: 50px;
+    background-color: #ff6600;
+    font-size: 22px;
+    padding: 10px 5px;
+    font-weight: bold;
+}
+
+.hackernews-body {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.hackernews-logo {
+    border:1px solid #fff;
+    color: #fff;
+    padding: 2px 12px;
+}
+
+.hackernews-logo-text {
+    color: #000;
+}
+
+.hackernews-section-title {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.hackernews-search-container {
+    display:flex;
+    background-color: #fff;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.hackernews-search-container .search-btn {
+    color: #ff6600;
+    border-color: #ced4da;
+    border-left-color: transparent;
+}
+
+.hackernews-search-container input {
+    border-right-color: transparent;
+}
+
+.hackernews-search-container .input-container {
+    display: flex;
+    flex:1 0 auto;
+    border: 1px solid #ccc;
+    height: 44px;
+    border-radius: 2px;
+}
+
+.input-container input, .input-container{
+    flex: 1 0 auto;
+    border: none;
+    outline: none;
+}
+
+.story-item {
+    background-color: #fff;
+    width: 100%;
+    padding: 15px;
+    border-radius: 2px;
+    margin-bottom: 8px;
+}
+
+.story-item-title, .story-item-comments-count {
+    color: #5b5b5b;
+}
+
+.story-item-author {
+    color: #a2a2a2;
+}
+

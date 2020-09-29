@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BeepSaudeChallenge</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Adding vue.js dependecy -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="hackernews-header">
+      <div class="container">
+        <div class="hackernews-logo-container">
+          <span class="hackernews-logo">Y</span>
+          <span class="hackernews-logo-text">Hacker News</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="hackernews-body">
+      <section class="hackernews-search-container">
+        <div class="container">
+          <div class="input-group">
+          <%= form_tag '/search', :class => "d-flex w-100" , method: :get do %>
+            <%= text_field_tag 'query', params[:query], placeholder: 'Search stories', class: 'form-control' %>
+            <div class="input-group-append">
+              <button type="button" class="btn btn-link search-btn">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                  <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                </svg>
+              </button>
+            </div>
+          <% end %>
+          </div>
+        </div>
+      </section>
+      <%= content_for?(:stories) ? yield(:stories) : yield %> 
+    </div>
+  </body>
+</html>

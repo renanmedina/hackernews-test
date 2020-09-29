@@ -1,0 +1,8 @@
+<% content_for :stories do %>
+  <section class="stories-container container mt-3">
+    <h2 class="hackernews-section-title mb-4 mt-4">Top <%= @stories.size %> Hacker News</h2>
+    <%= render :partial => "stories_list" %>
+  </section>
+<% end %>
+
+<%= render template: "layouts/application" %>

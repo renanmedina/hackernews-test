@@ -1,0 +1,16 @@
+<% if @stories.any? %>
+  <div class="stories-list">
+    <% @stories.each do |story| %>
+      <div class="story-item">
+        <h5 class="story-item-title"><%= story.title %></h5>
+        <small class="story-item-author">By <span class="underline"><%= story.by %></span> <span class="underline"><%= story.datetime.strftime "%d/%m/%Y %I:%M" %></span></small>
+        <h5 class="story-item-comments-count mt-2"><%= story.kids.nil? ? 0 : story.kids.size %> comments</h5>
+        <a href="#">+ Show most relevant comments</a>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <div class="d-flex justify-content-center">
+    <p>No stories found ...</p>
+  </div>
+<% end %>
