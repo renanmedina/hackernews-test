@@ -24,9 +24,10 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
-a, a:active, a:hover, a:visited {
+a, a:active, a:hover, a:visited, .btn.btn-link {
     color: #ff6600;
     text-decoration: none;
+    padding-left: 0;
 }
 
 .underline {
@@ -101,7 +102,7 @@ a, a:active, a:hover, a:visited {
     width: 100%;
     padding: 15px;
     border-radius: 2px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .story-item-title, .story-item-comments-count {
@@ -110,5 +111,22 @@ a, a:active, a:hover, a:visited {
 
 .story-item-author {
     color: #a2a2a2;
+}
+
+.story-comments {
+    visibility: hidden;
+    height: 0;
+    transition: all 200ms ease-in;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    border-top: 1px solid transparent;
+}
+
+.story-comments.showing {
+    visibility: visible;
+    height: auto;
+    border-top-color: #eaeaea;
 }
 
