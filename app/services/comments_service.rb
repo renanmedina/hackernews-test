@@ -6,6 +6,7 @@ class CommentsService < HackerNewsService
 
   def fetch_relevant_comments(story_id, limit=MAX_RELEVANT_COMMENTS)
     story = self.fetch_item(story_id)
+    return [] if !story['kids']
     story['kids'] = story['kids'][0...limit] unless limit <= 0
     comments = []
     story['kids'].each { |comment_id| 
