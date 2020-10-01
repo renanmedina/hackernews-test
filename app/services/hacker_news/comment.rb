@@ -1,5 +1,6 @@
 module HackerNews
   class Comment < Item
+    attr_accessor :parent
     RELEVANT_COMMENT_WORDS = 20
 
     def is_relevant?
