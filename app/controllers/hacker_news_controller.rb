@@ -1,7 +1,8 @@
 class HackerNewsController < ApplicationController
-  def initialize()
-    @storiesService = HackerNews::Stories.new
-    @commentsService = HackerNews::Comments.new
+  
+  def initialize
+    @storiesService = StoriesService.new
+    @commentsService = CommentsService.new
   end
 
   def index
