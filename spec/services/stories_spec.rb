@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Stories, type: :model do
+RSpec.describe StoriesService, type: :model do
 
   subject { described_class.new }
 

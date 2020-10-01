@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Comments, type: :model do
+RSpec.describe CommentsService, type: :model do
 
   subject { described_class.new }
 

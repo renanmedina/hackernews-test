@@ -21,20 +21,10 @@ describe CommentFactory do
     }
   }
 
-  subject { described_class.new(attributes) }
-
   describe '.call' do
     it 'returns a comment instance' do
-      comment = subject.call
+      comment = described_class.call(attributes)
       expect(comment).to be_kind_of(Comment)
-    end
-  end
-
-  describe '.is_relevant?' do
-    it 'returns if a comment is relevant or not' do
-      comment = subject.call
-      expect(comment).to be_kind_of(Comment)
-      expect(comment.is_relevant?).to be_true
     end
   end
 end
