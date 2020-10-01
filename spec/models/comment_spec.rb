@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe HackerNews::Comment, type: :model do
+RSpec.describe Comment, type: :model do
   it { is_expected.to have_attr_accessor(:by) }
   it { is_expected.to have_attr_accessor(:dead) }
   it { is_expected.to have_attr_accessor(:descendants) }

@@ -54,14 +54,14 @@ RSpec.describe StoryFactory, type: :model do
   describe 'call' do
     it 'returns a story instance' do
       story = subject.call
-      expect(story).to be_kind_of(HackerNews::Story)
+      expect(story).to be_kind_of(Story)
     end
   end
 
   describe 'matches?' do
     it 'returns if a story titles matches a query' do
       story = subject.call
-      expect(story).to be_kind_of(HackerNews::Story)
+      expect(story).to be_kind_of(Story)
       expect(story.matches?('friend')).to be_true
     end
   end

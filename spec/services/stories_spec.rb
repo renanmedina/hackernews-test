@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe HackerNews::Stories, type: :model do
+RSpec.describe Stories, type: :model do
 
   subject { described_class.new }
 
@@ -26,7 +26,7 @@ RSpec.describe HackerNews::Stories, type: :model do
     it 'returns an array of matched stories' do
       found_stories = subject.search('shows')
       expect(found_stories).to be_an_instance_of(Array)
-      expect(found_stories[0]).to be_kind_of(HackerNews::Story)
+      expect(found_stories[0]).to be_kind_of(Story)
     end
   end
 

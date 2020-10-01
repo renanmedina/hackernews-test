@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe HackerNews::ItemFactory do
+RSpec.describe ItemFactory do
   describe '.call' do
     it 'instantes a new instance of the Item object' do
       expect(described_class).to receive(:new).with({}) { double(call: []) }
@@ -17,7 +17,7 @@ RSpec.describe HackerNews::ItemFactory do
     subject { described_class.new({ 'id' => '155874186' }) }
 
     it 'create Item instance' do
-      expect { subject.call }.to be_kind_of(HackerNews::Item)
+      expect { subject.call }.to be_kind_of(Item)
     end
   end
 end

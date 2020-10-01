@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe HackerNews::Story, type: :model do
+RSpec.describe Story, type: :model do
   it { is_expected.to have_attr_accessor(:by) }
   it { is_expected.to have_attr_accessor(:descendants) }
   it { is_expected.to have_attr_accessor(:deleted) }
