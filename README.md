@@ -32,7 +32,7 @@ Requisitos:
 1. Clone o projeto do github na sua maquina local e instale as dependencias do projeto:
 
 ```bash
-$ bundle install
+$ bundle install && yarn install
 ```
 
 2. Copie o arquivo de environment e troque pelas suas devidas informações:

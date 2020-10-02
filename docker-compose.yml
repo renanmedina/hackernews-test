@@ -1,0 +1,16 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - /var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+  web:
+    build: .
+    volumes:
+      - .:/hackernews
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
