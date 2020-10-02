@@ -14,7 +14,7 @@ RSpec.describe StoriesService, type: :model do
     end
 
     context 'when limit is not set' do
-      it 'returns an array of stories with 15 items' do
+      it 'returns an array of stories with default 15 items' do
         top_stories = subject.fetch_top
         expect(top_stories).to be_kind_of(Array)
         expect(top_stories.size).to eq(15)
@@ -24,7 +24,7 @@ RSpec.describe StoriesService, type: :model do
 
   describe '.search' do 
     it 'returns an array of matched stories' do
-      found_stories = subject.search('shows')
+      found_stories = subject.search('rule')
       expect(found_stories).to be_an_instance_of(Array)
       expect(found_stories[0]).to be_kind_of(Story)
     end
