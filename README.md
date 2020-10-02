@@ -35,7 +35,13 @@ Requisitos:
 $ bundle install
 ```
 
-3) Inicialize o banco de dados:
+2. Copie o arquivo de environment e troque pelas suas devidas informações:
+
+```bash
+$ cp .env.default .env
+```
+
+3. Inicialize o banco de dados:
 
 ```bash
 $ rails db:setup
