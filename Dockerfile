@@ -6,8 +6,7 @@ RUN npm install -g yarn
 RUN mkdir /hackernews
 WORKDIR /hackernews
 COPY . /hackernews
-RUN cp config/database-docker.yml database.yml
-RUN bundle install && yarn install
+RUN cp config/database-docker.yml database.yml && bundle install && yarn install
 
 # Start the main process.
 EXPOSE 3000
