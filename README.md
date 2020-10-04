@@ -27,8 +27,21 @@ Requisitos:
 * RubyGems >= 3.0
 * PostgreSQL >= 9.3
 
-## Passo a passo
+### Passo a passo
 
+## Docker Compose
+
+Disponível no projeto há um docker-compose.yml para facilitar a inicialização da aplicação utilizando docker.
+
+1. Para inicializar os containers, utilize o comando abaixo:
+
+```bash
+docker-compose up --build
+```
+
+Este comando irá inicializar os containers web e db. a aplicação estara disponível em: http://localhost:3000
+
+## Build Manual
 1. Clone o projeto do github na sua maquina local e instale as dependencias do projeto:
 
 ```bash
