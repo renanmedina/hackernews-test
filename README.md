@@ -57,7 +57,7 @@ $ cp .env.default .env
 3. Inicialize o banco de dados:
 
 ```bash
-$ rails db:setup
+$ rake db:setup
 ```
 
 ## Testes
