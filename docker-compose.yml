@@ -10,9 +10,7 @@ services:
       - "5432:5432"
   web:
     build: .
-    command: bin/rails server --port 3000 --binding 0.0.0.0
-    volumes:
-      - .:/hackernews
+    command: bash -c "rake db:setup && rails server --port 3000 --binding 0.0.0.0"
     ports:
       - "3000:3000"
     depends_on:
